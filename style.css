@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #050505;
+  color: white;
+}
+
+.box {
+  max-width: 400px;
+  margin: 60px auto;
+  padding: 20px;
+  background: #111;
+  border-radius: 10px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  background: #000;
+  color: white;
+  border: 1px solid #00f3ff;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #00f3ff;
+  border: none;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+header, footer {
+  padding: 10px;
+  background: #111;
+  display: flex;
+  justify-content: space-between;
+}
+
+.post {
+  background: #111;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 8px;
+  }
