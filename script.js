@@ -35,3 +35,37 @@ function loadPosts() {
     feed.innerHTML += `<div class="post">${p}</div>`;
   });
 }
+// SIGN UP
+async function signup() {
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  const { data, error } = await supabase.auth.signUp({
+    email,
+    password,
+  });
+
+  if (error) {
+    alert("Error: " + error.message);
+  } else {
+    alert("Signup successful! Check your email for verification.");
+  }
+}
+
+// LOGIN
+async function login() {
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  const { data, error } = await supabase.auth.signInWithPassword({
+    email,
+    password,
+  });
+
+  if (error) {
+    alert("Error: " + error.message);
+  } else {
+    alert("Login successful!");
+    window.location.href = "home.html"; // Change to your feed page
+  }
+    }
