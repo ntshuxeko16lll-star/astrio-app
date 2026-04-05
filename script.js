@@ -1,3 +1,7 @@
+// // Initialize Supabase
+const SUPABASE_URL = "YOUR_PROJECT_URL";
+const SUPABASE_KEY = "YOUR_ANON_KEY";
+const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 let posts = [];
 
 function signup() {
@@ -30,4 +34,4 @@ function loadPosts() {
   posts.reverse().forEach(p => {
     feed.innerHTML += `<div class="post">${p}</div>`;
   });
-                       }
+}
